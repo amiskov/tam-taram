@@ -1,3 +1,31 @@
+<!-- Код для примера -->
 body {
     background: #ccc;
 }
+
+.menu {
+    background: #000;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    &__item {
+        display: inline-block;
+        list-style-type: none;
+    }
+
+    &__link {
+        color: #FFF;
+    }
+
+    // Bottom Menu
+    &_bottom {
+        background: green;
+    }
+
+    &_bottom &__link {
+        color: #f00;
+    }
+}
+
+

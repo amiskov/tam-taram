@@ -9,14 +9,35 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<% const users = ['Vasya', 'Petya', 'Sveta']; %>
 
-<h1>Users</h1>
-<ul>
-    <% users.forEach((user) => { %>
-    <li>Hello, <%- user %>!</li>
-    <% }); %>
-</ul>
+<!-- Код для примера -->
+
+<% const menuItems = [
+    {title: 'HairCare', link: '#'},
+    {title: 'Color', link: '#'},
+    {title: 'Styling', link: '#'}
+    /* ... */
+]; %>
+
+<header class="header">
+    <div class="header__top">
+    </div>
+    <div class="header__bottom">
+        <div class="menu header__menu">
+            <% menuItems.forEach((item) => { %>
+            <li class="menu__item"><a class="menu__link" href="<%= item.link; %>"><%= item.title %></a></li>
+            <% }) %>
+        </div>
+    </div>
+</header>
+
 <img src="img/pic.png" alt="">
+<footer class="footer">
+    <div class="menu menu_bottom footer__menu">
+        <% menuItems.forEach((item) => { %>
+        <li class="menu__item"><a class="menu__link" href="<%= item.link; %>"><%= item.title %></a></li>
+        <% }) %>
+    </div>
+</footer>
 </body>
 </html>
