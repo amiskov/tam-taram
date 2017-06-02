@@ -4,7 +4,10 @@
 ## Макеты
 [Архив с макетами](https://yadi.sk/d/GJ7FD6dM3JiTkC) для мобильных, планшетов и десктопов.
 
-В архиве вы найдете 3 файла PSD, 3 файла PNG с превьюшками и необходимые иконки в SVG.
+В архиве вы найдете:
+* 3 файла PSD
+* 3 файла PNG с превьюшками макетов
+* Необходимые иконки в SVG.
 
 ### Слайдер
 Картинки в слайдере должны [грузиться с Ютюба](http://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api?answertab=votes#tab-top).
