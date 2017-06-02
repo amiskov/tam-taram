@@ -1,11 +1,13 @@
 # TAM-TARAM Project Template
 
-[Макет](https://yadi.sk/d/GJ7FD6dM3JiTkC)
+[Макеты](https://yadi.sk/d/GJ7FD6dM3JiTkC) для мобильных, планшетов и десктопов.
 
 ## Требования
 * [БЭМ](https://ru.bem.info/methodology/).
 * Шаблонизатор [EJS](https://github.com/mde/ejs).
-* [Slick](http://kenwheeler.github.io/slick/) для слайдеров.
+* Из библиотек можно использовать только jQuery и [Slick](http://kenwheeler.github.io/slick/). Либо все напиать руками на чистом JS. Другие варианты не рассматриваются.
+* Адаптивность. В `src/less/media.less` есть переменные. Используйте их и/или добавьте свои.
+* Код должен соответствовать стандартам. В проекте имеются `ESLint`, `Stylelint` и `Editorconfig`.
 
 ## Работа с репозиторием
 В примерах ниже пользователь `amiskov` выдает и проверят задачи, `username` их выполняет.
