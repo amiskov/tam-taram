@@ -7,37 +7,326 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+
+
+   <!-- 1. Add latest jQuery and fancyBox files -->
+
+<!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+
+
+    
+<style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+        width: 70.5%;
+        margin: 0px auto;
+    }
+
+    .slick-slide {
+      margin: 10px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: black;
+    }
+  </style>
+
+
+
 </head>
 <body>
 
 <!-- Код для примера -->
 
 <% const menuItems = [
-    {title: 'HairCare', link: '#'},
-    {title: 'Color', link: '#'},
-    {title: 'Styling', link: '#'}
+    {title: 'HAIRCARE', link: '#'},
+    {title: 'COLOR', link: '#'},
+    {title: 'STYLING', link: '#'},
+    {title: 'TEXTURE', link: '#'},
+    {title: 'GETINSPIRED', link: '#'},
+    {title: 'SOCIAL', link: '#'},
+    {title: 'NEWS', link: '#'},
+    {title: 'ABOUT', link: '#'},
+    {title: 'PROFESSIONAL', link: '#'}
     /* ... */
 ]; %>
 
+  
+
 <header class="header">
     <div class="header__top">
+       
+     
+       <span class="header__naw">
+        <p class="header__txt">NEAREST SALONE <img src="img/svg/ico_dropdown.svg" class="header__dropdown"> <br> Chaltyr,92101</p>
+       </span>
+        <img src="img/Rectangle49.png" class="header__rectangle">
+        <img src="img/svg/logo.svg" class="header__logo">
+        <img src="img/svg/ico_search.svg" class="header__search">        
     </div>
     <div class="header__bottom">
         <div class="menu header__menu">
             <% menuItems.forEach((item) => { %>
             <li class="menu__item"><a class="menu__link" href="<%= item.link; %>"><%= item.title %></a></li>
             <% }) %>
+            <span class="menu__naw">
+        <p class="menu__txt">NEAREST SALONE <img src="img/svg/ico_dropdown.svg" class="menu__dropdown"> <br> Plush Salon 92101</p>
+             </span>
+             <img src="img/svg/ico_search.svg" class="menu__search">   
+
         </div>
     </div>
 </header>
 
-<img src="img/pic.png" alt="">
-<footer class="footer">
-    <div class="menu menu_bottom footer__menu">
-        <% menuItems.forEach((item) => { %>
-        <li class="menu__item"><a class="menu__link" href="<%= item.link; %>"><%= item.title %></a></li>
-        <% }) %>
+<div class="nawigation">
+    <div class="nawigation__breadcrumb-search">
+        <ul class="nawigation__breadcrumb-search-item">
+            <li class="nawigation__search-item"><a href="" class="nawigation__link" >HOME</a></li>
+            <li class="nawigation__search-item"><a href="" class="nawigation__link">/</a></li>
+            <li class="nawigation__search-item"><span class="nawigation__linkup">VIDEOS<span></li>
+        </ul>
     </div>
-</footer>
+
+    <div class="nawigation__content">
+       <span class="nawigation__content-item">VIDEOS</span> 
+            <div class="nawigation__video">
+                <img src="//img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" class="nawigation__video-item1" >
+                <a data-fancybox href="https://www.youtube.com/watch?v=z8M0Fa1JVco"><span class="nawigation__video-item2"> </span> </a>
+                <span class="nawigation__video-item3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lobortis, nisl at ullamcorper egestas, felisadi piscing dolor, a interdum lorem urna quis magna.</span>
+            </div>
+    </div>
+
+    <div class="nawigation__content2" >
+       <span class="nawigation__content-item">STEP <span style="color:#cd1d2c;">BY</span> STEP </span> 
+            <div class="nawigation__video2">
+                <img src="//img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" class="nawigation__video-item1" >
+                <a data-fancybox href="https://www.youtube.com/watch?v=z8M0Fa1JVco"><span class="nawigation__video-item2"> </span> </a>
+            </div>
+            <div class="nawigation__video2">
+                <img src="//img.youtube.com/vi/Wi2KcdoCuo4/maxresdefault.jpg" class="nawigation__video-item1" >
+                <a data-fancybox href="https://www.youtube.com/watch?v=Wi2KcdoCuo4"><span class="nawigation__video-item2"> </span> </a>
+            </div>
+            <div class="nawigation__video2">
+                <img src="//img.youtube.com/vi/8H6dYUgQKB8/maxresdefault.jpg" class="nawigation__video-item1" >
+                <a data-fancybox href="https://www.youtube.com/watch?v=8H6dYUgQKB8"><span class="nawigation__video-item2"> </span> </a>
+            </div>
+        <div id="box" style="display: none;">
+            <div class="nawigation__video2" >
+                <img src="//img.youtube.com/vi/PZjGrmHdFME/maxresdefault.jpg" class="nawigation__video-item1" >
+                <a data-fancybox href="https://www.youtube.com/watch?v=PZjGrmHdFME"><span class="nawigation__video-item2"> </span> </a>
+            </div>
+            <div class="nawigation__video2" >
+                <img src="//img.youtube.com/vi/_wLGr24VeoI/maxresdefault.jpg" class="nawigation__video-item1" >
+                <a data-fancybox href="https://www.youtube.com/watch?v=_wLGr24VeoI"><span class="nawigation__video-item2"> </span> </a>
+            </div>
+            <div class="nawigation__video2" >
+                <img src="//img.youtube.com/vi/DG4FAU5qmMY/maxresdefault.jpg" class="nawigation__video-item1" >
+                <a data-fancybox href="https://www.youtube.com/watch?v=DG4FAU5qmMY"><span class="nawigation__video-item2"> </span> </a>
+            </div>
+        </div>
+
+            <div class="nawigation__button">
+                <a href="" onclick="openbox('box'); return false"><p class="nawigation__button-item">LOAD MORE</p></a>
+            </div>
+    </div>
+
+     <div class="nawigation__content2" >
+       <span class="nawigation__content-item">CRAFT <span style="color:#cd1d2c;">EDUCATION</span> </span> 
+            <div class="nawigation__video2">
+                <img src="//img.youtube.com/vi/RmNWNLXmswk/maxresdefault.jpg" class="nawigation__video-item1" >
+                <a data-fancybox href="https://www.youtube.com/watch?v=RmNWNLXmswk"><span class="nawigation__video-item2"> </span> </a>
+            </div>
+            <div class="nawigation__video2">
+                <img src="//img.youtube.com/vi/-tztXOz8Vc0/maxresdefault.jpg" class="nawigation__video-item1" >
+                <a data-fancybox href="https://www.youtube.com/watch?v=-tztXOz8Vc0"><span class="nawigation__video-item2"> </span> </a>
+            </div>
+            <div class="nawigation__video2">
+                <img src="//img.youtube.com/vi/kUfIVtyydgQ/maxresdefault.jpg" class="nawigation__video-item1" >
+                <a data-fancybox href="https://www.youtube.com/watch?v=kUfIVtyydgQ"><span class="nawigation__video-item2"> </span> </a>
+            </div>
+        
+        <div class="nawigation__button"" >
+                <a href="" ><p class="nawigation__button-item">LOAD MORE</p></a>
+        </div>
+    </div>
+
+        <div class="nawigation__content2" >
+                <span class="nawigation__content-item">STEP <span style="color:#cd1d2c;">BY</span> STEP</span> 
+            <div class="nawigation__video2">
+                <img src="//img.youtube.com/vi/VmmwwzR536g/maxresdefault.jpg" class="nawigation__video-item1" >
+                <a data-fancybox href="https://www.youtube.com/watch?v=VmmwwzR536g"><span class="nawigation__video-item2"> </span> </a>
+            </div>
+            <div class="nawigation__video2">
+                <img src="//img.youtube.com/vi/vz0k8O-Ef9Y/maxresdefault.jpg" class="nawigation__video-item1" >
+                <a data-fancybox href="https://www.youtube.com/watch?v=vz0k8O-Ef9Y"><span class="nawigation__video-item2"> </span> </a>
+            </div>
+            <div class="nawigation__video2">
+                <img src="//img.youtube.com/vi/6oPBFnsqJW8/maxresdefault.jpg" class="nawigation__video-item1" >
+                <a data-fancybox href="https://www.youtube.com/watch?v=6oPBFnsqJW8"><span class="nawigation__video-item2"> </span> </a>
+            </div>
+       
+
+            <div class="nawigation__button"" >
+                <a href="" ><p class="nawigation__button-item">LOAD MORE</p></a>
+            </div>
+        </div>
+</div>
+
+    
+
+<div class="nawigation2">
+        <div class="nawigation2__content">
+                <span class="nawigation2__content-item">STEP <span style="color:#cd1d2c;">BY</span> STEP</span> 
+                    <div class="slider multiple-items">
+
+                            <div>
+                                <img src="//img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" class="nawigation__video-item1" >
+                                 <a data-fancybox href="https://www.youtube.com/watch?v=z8M0Fa1JVco"><span class="nawigation__video-item2"> </span> </a>
+                            </div>
+                            <div>
+                                <img src="//img.youtube.com/vi/Wi2KcdoCuo4/maxresdefault.jpg" class="nawigation__video-item1" >
+                                 <a data-fancybox href="https://www.youtube.com/watch?v=Wi2KcdoCuo4"><span class="nawigation__video-item2"> </span> </a>
+                            </div>
+                            <div>
+                                <img src="//img.youtube.com/vi/8H6dYUgQKB8/maxresdefault.jpg" class="nawigation__video-item1" >
+                                 <a data-fancybox href="https://www.youtube.com/watch?v=8H6dYUgQKB8"><span class="nawigation__video-item2"> </span> </a>
+                            </div>
+                            <div>
+                                <img src="//img.youtube.com/vi/PZjGrmHdFME/maxresdefault.jpg" class="nawigation__video-item1" >
+                                 <a data-fancybox href="https://www.youtube.com/watch?v=PZjGrmHdFME"><span class="nawigation__video-item2"> </span> </a>
+                            </div>
+                            <div>
+                                <img src="//img.youtube.com/vi/_wLGr24VeoI/maxresdefault.jpg" class="nawigation__video-item1" >
+                                 <a data-fancybox href="https://www.youtube.com/watch?v=_wLGr24VeoI"><span class="nawigation__video-item2"> </span> </a>
+                            </div>
+                            <div>
+                                <img src="//img.youtube.com/vi/DG4FAU5qmMY/maxresdefault.jpg" class="nawigation__video-item1" >
+                                 <a data-fancybox href="https://www.youtube.com/watch?v=DG4FAU5qmMYk"><span class="nawigation__video-item2"> </span> </a>
+                            </div>
+                            
+                    </div>
+
+                    
+        </div>
+</div>
+
+<div class="nawigation2">
+        <div class="nawigation2__content">
+                <span class="nawigation2__content-item">CRAFT <span style="color:#cd1d2c;">EDUCATION</span></span> 
+                    <div class="slider multiple-items">
+
+                            <div>
+                                <img src="//img.youtube.com/vi/RmNWNLXmswk/maxresdefault.jpg" class="nawigation__video-item1" >
+                                 <a data-fancybox href="https://www.youtube.com/watch?v=RmNWNLXmswk"><span class="nawigation__video-item2"> </span> </a>
+                            </div>
+                            <div>
+                                <img src="//img.youtube.com/vi/-tztXOz8Vc0/maxresdefault.jpg" class="nawigation__video-item1" >
+                                 <a data-fancybox href="https://www.youtube.com/watch?v=-tztXOz8Vc0"><span class="nawigation__video-item2"> </span> </a>
+                            </div>
+                            <div>
+                                <img src="//img.youtube.com/vi/kUfIVtyydgQ/maxresdefault.jpg" class="nawigation__video-item1" >
+                                 <a data-fancybox href="https://www.youtube.com/watch?v=kUfIVtyydgQ"><span class="nawigation__video-item2"> </span> </a>
+                            </div>
+                           
+                            
+                            
+                    </div>
+
+                    
+        </div>
+</div>
+
+<div class="nawigation2">
+        <div class="nawigation2__content">
+                <span class="nawigation2__content-item">INSPIRATION</span> 
+                    <div class="slider multiple-items">
+
+                            <div>
+                                <img src="//img.youtube.com/vi/VmmwwzR536g/maxresdefault.jpg" class="nawigation__video-item1" >
+                                 <a data-fancybox href="https://www.youtube.com/watch?v=VmmwwzR536g"><span class="nawigation__video-item2"> </span> </a>
+                            </div>
+                            <div>
+                                <img src="//img.youtube.com/vi/vz0k8O-Ef9Y/mqdefault.jpg" class="nawigation__video-item1" >
+                                 <a data-fancybox href="https://www.youtube.com/watch?v=vz0k8O-Ef9Y"><span class="nawigation__video-item2"> </span> </a>
+                            </div>
+                            <div>
+                                <img src="//img.youtube.com/vi/6oPBFnsqJW8/maxresdefault.jpg" class="nawigation__video-item1" >
+                                 <a data-fancybox href="https://www.youtube.com/watch?v=6oPBFnsqJW8"><span class="nawigation__video-item2"> </span> </a>
+                            </div> 
+                    </div>
+
+                    
+        </div>
+</div>
+
+
+
+<div class="footer">
+    <div class="footer__content">
+<p class="footer__info">PRIVACY POLICY  TERMS OF USE  CONTACT US </br> NEWSLETTER   SITEMAP</p>
+        <div class="footer__images">
+            <img src="img/svg/ico_facebook.svg" class="footer__images-item">
+            <img src="img/svg/ico_twitter.svg" class="footer__images-item">
+            <img src="img/svg/ico_pinterest.svg" class="footer__images-item">
+            <img src="img/svg/ico_youtube.svg" class="footer__images-item">
+            <img src="img/svg/ico_instagram.svg" class="footer__images-item">
+        </div>
+
+       
+            <p class="footer__location">LACATION: UNITED STATES </br> LANGUAGE: ENGLISH</p>
+            
+        
+
+        
+           
+        
+
+    </div>
+</div>
+
+
+
+ <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+ <script src="js/jquery.fancybox.min.js"></script>
+ <script type="text/javascript">
+
+function openbox(id){
+    display = document.getElementById(id).style.display;
+    if(display=='none'){
+       document.getElementById(id).style.display='block';
+    }else{
+       document.getElementById(id).style.display='none';
+    }
+}
+</script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="js/slick.js" type="text/javascript"></script>
+ 
+ 
+
+<script type="text/javascript">
+    $('.multiple-items').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1
+});
+</script>
+
 </body>
 </html>
