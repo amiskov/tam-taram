@@ -29,16 +29,18 @@ gulp.task('img', () => {
         .pipe(gulp.dest('./dist/img'));
 });
 
-gulp.task('js', () => {
-    gulp.src('src/js/**/*.*')
-        .pipe(gulp.dest('./dist/js'));
-});
+
 
 gulp.task('html', () => {
     gulp.src('src/index.ejs')
         .pipe(ejs().on('error', gutil.log))
         .pipe(rename('index.html'))
         .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('js', () => {
+    gulp.src('src/js/**/*.*')
+        .pipe(gulp.dest('./dist/js'));
 });
 
 gulp.watch('src/less/*.less', ['styles']);
