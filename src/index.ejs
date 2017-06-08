@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="css/main.css">
     <!-- 1. Add latest jQuery and fancyBox files -->
 
-    <!-- CSS --> 
-<link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/
-jquery.fancybox.min.css" />
-<link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/
+jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 </head>
 <body>
 
@@ -35,8 +35,9 @@ jquery.fancybox.min.css" />
 <header class="header">
     <div class="header__top">
         <div class="nearest-salon">
-                <p class="nearest-salon__info">NEAREST SALONE <img src="img/svg/ico_dropdown.svg" class="nearest-salon__dropdown"> <br> Chaltyr,92101</p>
-       </div>
+            <p class="nearest-salon__info">NEAREST SALON <img src="img/svg/ico_dropdown.svg"
+                                                              class="nearest-salon__dropdown"> <br> Chaltyr,92101</p>
+        </div>
         <img src="img/menu.png" class="header__menu">
         <img src="img/svg/logo.svg" class="header__logo">
         <img src="img/svg/ico_search.svg" class="header__search">
@@ -48,9 +49,10 @@ jquery.fancybox.min.css" />
             <li class="menu__item"><a class="menu__link" href="<%= item.link; %>"><%= item.title %></a></li>
             <% }) %>
             <div class="menu__naw">
-        <p class="menu__txt">NEAREST SALONE <img src="img/svg/ico_dropdown.svg" class="menu__dropdown"> <br> Plush Salon 92101</p>
-             </div>
-             <img src="img/svg/ico_search.svg" class="menu__search">   
+                <p class="menu__txt">NEAREST SALONE <img src="img/svg/ico_dropdown.svg" class="menu__dropdown"> <br>
+                    Plush Salon 92101</p>
+            </div>
+            <img src="img/svg/ico_search.svg" class="menu__search">
         </div>
     </div>
 </header>
@@ -102,31 +104,31 @@ jquery.fancybox.min.css" />
                 'VQHjWtrsHyA',
                 '6oPBFnsqJW8'
             ]
-        },
+        }
     ]; %>
 
     <div class="videos">
         <% videoSecitons.forEach(section => { %>
         <section class="video-seciton">
-            <span class="video-seciton__title"><%= section.title %></span>
-            <div class="slider multiple-items" >
-            <% section.previews.forEach((preview) => { %>
-                <div class="video-seciton__list video-preview">
+            <h3 class="video-seciton__title"><%= section.title %></h3>
+            <div class="slider multiple-items">
+                <% var i = 1; section.previews.forEach((preview) => { %>
+                <div class="video-seciton__list video-seciton__list_<%= i %> video-preview">
                     <a data-fancybox href="https://www.youtube.com/watch?v=<%= preview %>">
                         <img src="//img.youtube.com/vi/<%= preview %>/maxresdefault.jpg" class="video-preview__pic">
                         <span class="video-preview__play"></span>
-                    </a>  
+                    </a>
                 </div>
-            <% }); %>
+                <% i++; }); %>
             </div>
-            <div class="button"" >
-                <a href="" ><p class="button__link">LOAD MORE</p></a>
+            <div class="button">
+                <a href=""><p class="button__link">LOAD MORE</p></a>
             </div>
         </section>
         <% }); %>
     </div>
 
-<% const footerSecitons = [
+    <% const footerSecitons = [
         {
             previews: [
                 'ico_facebook.svg',
@@ -137,25 +139,25 @@ jquery.fancybox.min.css" />
             ]
         }
     ]; %>
-<div class="footer">
-    <% footerSecitons.forEach(section => { %>
-    <div class="footer__content">
-        <p class="footer__information">PRIVACY POLICY TERMS OF USE CONTACT US </br> NEWSLETTER SITEMAP</p>
-        <div class="footer__images">
-         <% section.previews.forEach((preview) => { %>
-            <img src="img/svg/<%= preview %>" class="footer__images-item">
-             <% }); %>
+    <div class="footer">
+        <% footerSecitons.forEach(section => { %>
+        <div class="footer__content">
+            <p class="footer__information">PRIVACY POLICY TERMS OF USE CONTACT US <br> NEWSLETTER SITEMAP</p>
+            <div class="footer__images">
+                <% section.previews.forEach((preview) => { %>
+                <img src="img/svg/<%= preview %>" class="footer__images-item">
+                <% }); %>
+            </div>
+            <p class="footer__location">LACATION: UNITED STATES <br> LANGUAGE: ENGLISH</p>
         </div>
-        <p class="footer__location">LACATION: UNITED STATES </br> LANGUAGE: ENGLISH</p>
+        <% }); %>
     </div>
-     <% }); %>
-</div>
 
-<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
-<script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-<script src="js/js.js"></script>
-<script src="js/slick/slick.js" type="text/javascript"></script>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/slick/slick.js" type="text/javascript"></script>
 
 
 </body>

@@ -1,4 +1,3 @@
-
 //@import "~slick-carousel/slick/slick.less";
 @import "media.less";
 // Код для примера
@@ -8,12 +7,12 @@ body {
     padding: 0px;
     margin: 0px;
 }
-     
+
 @font-face {
     font-family: "PTSans";
-    src:url("../fonts/PTSans/PTSansRegular/PTSansRegular.ttf") format("truetype"),
+    src: url("../fonts/PTSans/PTSansRegular/PTSansRegular.ttf") format("truetype"),
     url("../fonts/PTSans/PTSansRegular/PTSansRegular.woff") format("woff");
-    
+
 }
 
 .menu {
@@ -55,6 +54,7 @@ body {
             padding-left: 17px;
             padding-right: 17px;
         }
+
         &__item:hover {
             background-color: #000000;
         }
@@ -136,23 +136,22 @@ body {
     }
     .nearest-salon {
 
-    
-    &__info {
-        color: #fff;
-        float: left;
-        margin-top: -6px;
+        &__info {
+            color: #fff;
+            float: left;
+            margin-top: -6px;
+        }
+        &__dropdown {
+            height: 10px;
+        }
+
     }
-    &__dropdown {
-        height: 10px;
-    }
-   
-    }
-         @media (max-width: 768px) {
+    @media (max-width: 768px) {
         .nearest-salon {
             display: none;
         }
     }
-    &__menu{
+    &__menu {
 
     }
     @media @phone {
@@ -246,83 +245,82 @@ body {
 
     }
     .main-content {
-    &__item {
-        
-        font-size: 64px;
-    }
-    @media (min-width: 1025px) {
         &__item {
+
             font-size: 64px;
-            font-family: "PTSans";
         }
-    }
-
-    .video {
-        padding-top: 20px;
-        position: relative;
-        border-bottom-style: solid;
-        &__images {
-            max-width: 100%;
-        }
-
-        &__link {
-
-        }
-        @media @phone {
-            &__link {
-                background: url(../img/Polygon2.png) no-repeat;
-                height: 100px;
-                width: 100px;
-                position: absolute;
-                top: 42%;
-                left: 44%;
-                margin: -66px 0 0 -20px;
-                opacity: 0.8;
-                cursor: pointer;
+        @media (min-width: 1025px) {
+            &__item {
+                font-size: 64px;
+                font-family: "PTSans";
             }
         }
-        @media @tablet {
+
+        .video {
+            padding-top: 20px;
+            position: relative;
+            border-bottom-style: solid;
+            &__images {
+                max-width: 100%;
+            }
+
             &__link {
-                background: url(../img/Polygon2.png) no-repeat;
-                height: 100px;
-                width: 100px;
-                position: absolute;
-                top: 47%;
-                left: 44%;
-                margin: -48px 0 0 -20px;
-                opacity: 0.8;
-                cursor: pointer;
+
+            }
+            @media @phone {
+                &__link {
+                    background: url(../img/Polygon2.png) no-repeat;
+                    height: 100px;
+                    width: 100px;
+                    position: absolute;
+                    top: 42%;
+                    left: 44%;
+                    margin: -66px 0 0 -20px;
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+            @media @tablet {
+                &__link {
+                    background: url(../img/Polygon2.png) no-repeat;
+                    height: 100px;
+                    width: 100px;
+                    position: absolute;
+                    top: 47%;
+                    left: 44%;
+                    margin: -48px 0 0 -20px;
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+            @media @desktop {
+                &__link {
+                    background: url(../img/Polygon2.png) no-repeat;
+                    height: 100px;
+                    width: 100px;
+                    position: absolute;
+                    top: 47%;
+                    left: 44%;
+                    margin: -48px 0 0 -20px;
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+
+            &__information {
+                font-size: 16px;
+                font-weight: bold;
+            }
+            @media (min-width: 1025px) {
+                &__information {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
             }
         }
-        @media @desktop {
-            &__link {
-                background: url(../img/Polygon2.png) no-repeat;
-                height: 100px;
-                width: 100px;
-                position: absolute;
-                top: 47%;
-                left: 44%;
-                margin: -48px 0 0 -20px;
-                opacity: 0.8;
-                cursor: pointer;
-            }
-        }
-    
-    &__information {
-        font-size: 16px;
-        font-weight: bold;
-    }
-    @media (min-width: 1025px) {
-        &__information {
-            font-size: 20px;
-            font-weight: bold;
-        }
-    }
-    }
 
-
-}
-@media @phone {
+    }
+    @media @phone {
         .main-content {
             background-color: #FFF;
             height: 100%;
@@ -345,76 +343,77 @@ body {
     }
 }
 
-
 .videos {
 
-    .video-seciton{
-        &__title{
+    .video-seciton {
+        &__title {
             color: #000000;
             margin-left: 15.6%;
             display: block;
             margin-top: 100px;
             font-size: 64px;
+            font-family: PTSans;
         }
-            @media @phone {
-            &__title {
-            color: #000000;
-            margin-left: 7.6%;
-        }
-    }
 
-        .slider{  
+        @media @phone {
+            &__title {
+                color: #000;
+                margin-left: 7.6%;
+            }
+        }
+
+        .slider {
         }
         @media @phone {
-        .slider { 
+            .slider {
+            }
         }
+        @media @desktop {
+            .slider {
+                width: 70.5%;
+                margin: 0 auto;
+            }
         }
-        @media @desktop { 
-        .slider {     
-        width: 70.5% ;
-        margin: 0px auto;
-        }
-        }
-        .multiple-items{
-        }
-        @media @phone {
         .multiple-items {
-            
         }
+        @media @phone {
+            .multiple-items {
+
+            }
         }
         .slick-slide {
             margin: 10px 20px;
 
-        } 
-        @media @phone {
-        .slick-slide {
-            
         }
+        @media @phone {
+            .slick-slide {
+
+            }
         }
         .slick-slide img {
             width: 100%;
         }
         @media @phone {
-        .slick-slide img {   
+            .slick-slide img {
+            }
         }
-    }
         .slick-prev:before,
         .slick-next:before {
             color: black;
         }
-            .video-preview{
-                &__pic{
-                }
-                @media @phone {
+        .video-preview {
+            &__pic {
+            }
+            @media @phone {
                 &__pic {
                     margin-bottom: 40px;
                     max-width: 100%;
                 }
-                }
-                &__play{
-                }
-                    @media @desktop {
-                    &__play {
+            }
+            &__play {
+            }
+            @media @desktop {
+                &__play {
                     background: url(../img/Polygon2.png) no-repeat;
                     height: 100px;
                     width: 100px;
@@ -424,10 +423,10 @@ body {
                     opacity: 0.8;
                     cursor: pointer;
 
-                    }
                 }
-                    @media @phone {
-                    &__play {
+            }
+            @media @phone {
+                &__play {
                     background: url(../img/Polygon2.png) no-repeat;
                     height: 100px;
                     width: 100px;
@@ -436,50 +435,48 @@ body {
                     margin: -255px 0 0 0px;
                     opacity: 0.8;
                     cursor: pointer;
-                    }
                 }
             }
-             @media @phone {
-                    .video-preview {
-                          margin: 36px;
-                    }
-                }   
-            .button{
-                        &__link{
-                        color: #fff;
-                        display: inline-block;
-                        margin-top: 16px;
-                        }
-                        @media (max-width: 768px) {
-                        &__button-item {
-                        font-size: 13px;  
-                        }
-                        }
-                }  
-                    @media @phone {
-                        .button {
-                        background-color: #252525;
-                        height: 50px;
-                        width: 30%;
-                        text-align: center;
-                        margin: auto;
-                        position: relative;
-                        }
-                    }
-                    @media @tablet {
-                        .button {
-                        display: none;
-                        }
-                    }
-                    @media @desktop {
-                        .button {
-                        display: none;
-                        }
-                    }  
-     }
+        }
+        @media @phone {
+            .video-preview {
+                margin: 36px;
+            }
+        }
+        .button {
+            &__link {
+                color: #fff;
+                display: inline-block;
+                margin-top: 16px;
+            }
+            @media (max-width: 768px) {
+                &__button-item {
+                    font-size: 13px;
+                }
+            }
+        }
+        @media @phone {
+            .button {
+                background-color: #252525;
+                height: 50px;
+                width: 30%;
+                text-align: center;
+                margin: auto;
+                position: relative;
+            }
+        }
+        @media @tablet {
+            .button {
+                display: none;
+            }
+        }
+        @media @desktop {
+            .button {
+                display: none;
+            }
+        }
     }
-
-
+}
 
 .footer {
     margin-top: 100px;
