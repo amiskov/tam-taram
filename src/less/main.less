@@ -1,13 +1,20 @@
-@import "~slick-carousel/slick/slick.less";
+
+//@import "~slick-carousel/slick/slick.less";
 @import "media.less";
 // Код для примера
+
 body {
     background: #fff;
     padding: 0px;
     margin: 0px;
 }
      
-
+@font-face {
+    font-family: "PTSans";
+    src:url("../fonts/PTSans/PTSansRegular/PTSansRegular.ttf") format("truetype"),
+    url("../fonts/PTSans/PTSansRegular/PTSansRegular.woff") format("woff");
+    
+}
 
 .menu {
     text-align: center;
@@ -240,11 +247,13 @@ body {
     }
     .main-content {
     &__item {
+        
         font-size: 64px;
     }
     @media (min-width: 1025px) {
         &__item {
             font-size: 64px;
+            font-family: "PTSans";
         }
     }
 
