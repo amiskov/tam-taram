@@ -10,8 +10,8 @@ body {
 
 @font-face {
     font-family: "PTSans";
-    src: url("../fonts/PTSans/PTSansRegular/PTSansRegular.ttf") format("truetype"),
-    url("../fonts/PTSans/PTSansRegular/PTSansRegular.woff") format("woff");
+    src: url("../fonts/PTSans/PTSansBold/PTSansBold.ttf") format("truetype"),
+    url("../fonts/PTSans/PTSansBold/PTSansBold.woff") format("woff");
 
 }
 
@@ -26,6 +26,7 @@ body {
 
     &__item {
         display: inline-block;
+        font-family: "PTSans";
 
     }
 
@@ -60,7 +61,7 @@ body {
         }
     }
 
-    &__naw {
+    &__nav {
 
     }
     &__txt {
@@ -74,17 +75,17 @@ body {
         height: 10px;
     }
     @media (max-width: 768px) {
-        &__naw {
+        &__nav {
             margin-right: 10px;
         }
     }
     @media (min-width: 769px) {
-        &__naw {
+        &__nav {
             display: none;
         }
     }
     @media (min-width: 1025px) {
-        &__naw {
+        &__nav {
             display: none;
         }
     }
@@ -137,6 +138,7 @@ body {
     .nearest-salon {
 
         &__info {
+            font-family: "PTSans";
             color: #fff;
             float: left;
             margin-top: -6px;
@@ -236,10 +238,12 @@ body {
         display: inline-block;
     }
     &__ref {
+        font-family: "PTSans";
         text-decoration: none;
         color: #262626;
     }
     &__linkup {
+        font-family: "PTSans";
         text-decoration: none;
         color: #da5964;
 
@@ -308,6 +312,7 @@ body {
             }
 
             &__information {
+                font-family: "PTSans";
                 font-size: 16px;
                 font-weight: bold;
             }
@@ -383,6 +388,7 @@ body {
         }
         .slick-slide {
             margin: 10px 20px;
+            position: relative;
 
         }
         @media @phone {
@@ -412,27 +418,38 @@ body {
             }
             &__play {
             }
-            @media @desktop {
-                &__play {
-                    background: url(../img/Polygon2.png) no-repeat;
-                    height: 100px;
-                    width: 100px;
-                    position: absolute;
-                    top: 47%;
-                    margin: -48px 0 0 11.5%;
-                    opacity: 0.8;
-                    cursor: pointer;
-
-                }
-            }
             @media @phone {
                 &__play {
                     background: url(../img/Polygon2.png) no-repeat;
                     height: 100px;
                     width: 100px;
                     position: absolute;
-                    left: 44%;
-                    margin: -255px 0 0 0px;
+                    left: 43%;
+                    margin: -42% 0 0 0;
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+             @media @tablet {
+                &__play {
+                    background: url(../img/polygon2.png) no-repeat;
+                    height: 100px;
+                    width: 100px;
+                    position: absolute;
+                    top: 13%;
+                    margin: 0 0 0 36.5%;
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+            @media @desktop {
+                &__play {
+                    background: url(../img/polygon2.png) no-repeat;
+                    height: 100px;
+                    width: 100px;
+                    position: absolute;
+                    top: 25%;
+                    margin: 0 0 0 39.5%;
                     opacity: 0.8;
                     cursor: pointer;
                 }
@@ -442,6 +459,9 @@ body {
             .video-preview {
                 margin: 36px;
             }
+        }
+        .hidenn{
+            display: none;
         }
         .button {
             &__link {
@@ -540,12 +560,15 @@ body {
     }
 
     &__location {
+        font-family: "PTSans";
     }
     @media @phone {
         &__location {
             position: absolute;
             margin-top: 95px;
             margin-left: 25px;
+            color: #fff;
+            font-size: 20px;
 
         }
     }
@@ -570,9 +593,11 @@ body {
         }
     }
     &__information {
+        font-family: "PTSans";
     }
     @media @phone {
         &__information {
+            font-size: 20px;
             position: absolute;
             margin-top: 155px;
             margin-left: 25px;

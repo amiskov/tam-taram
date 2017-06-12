@@ -43,9 +43,15 @@ gulp.task('js', () => {
         .pipe(gulp.dest('./dist/js'));
 });
 
+gulp.task('fonts', () => {
+    gulp.src('src/fonts/**/*.*')
+        .pipe(gulp.dest('./dist/fonts'));
+});
+
 gulp.watch('src/less/**/*.less', ['styles']);
 gulp.watch('src/*.ejs', ['html']);
 gulp.watch('src/img/**/*.*', ['img']);
 gulp.watch('src/js/**/*.*', ['js']);
+gulp.watch('src/fonts/**/*.*', ['fonts']);
 
-gulp.task('default', ['styles', 'html', 'img', 'js']);
+gulp.task('default', ['styles', 'html', 'img', 'js', 'fonts' ]);
