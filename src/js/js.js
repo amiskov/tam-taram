@@ -1,49 +1,51 @@
 "use strict";
+const $videoSectionsHiddenOnMobile = $('.video-seciton__list_3 ~ .video-seciton__list');
+
 hide();
 $(window).resize(hide);
 
 function hide() {
-var width = $('body').innerWidth()
-
-if (width < 768) {
-	$('div.video-seciton__list_6').addClass('hidenn');
-    $('div.video-seciton__list_5').addClass('hidenn');
-    $('div.video-seciton__list_4').addClass('hidenn');
-	
-} else if (width > 768) {
-	$('div.video-seciton__list_4').removeClass('hidenn')
-	$('div.video-seciton__list_5').removeClass('hidenn')
- 	$('div.video-seciton__list_6').removeClass('hidenn')
-}
+    const width = $('body').innerWidth();
+    $videoSectionsHiddenOnMobile.toggleClass('hidenn', width <= 768);
 }
 
-
-$('div.button').bind('click', function(){
-  $("div.hidenn").css("display", "block")
+$('.js-button').on('click', function (event) {
+    event.preventDefault();
+    $(".hidenn").css("display", "block")
 });
 
+const $wrapper = $(".responsive");
 
- slick_slider();
-    $(window).resize(slick_slider);
+slickSlider($wrapper);
+$(window).resize(function () {
+    slickSlider($wrapper)
+});
 
+function isSlickInitialized() {
+    return $(".slick-initialized").length;
+}
 
-    function slick_slider() {
-        var wrapper = $(".responsive");
-        if ($(".slick-initialized").length) {
-            wrapper.slick('unslick');
-        }
-        wrapper.slick({
+function slickSlider($wrapper) {
+    if (isSlickInitialized() && $(window).width() <= 768) {
+        console.log('Mobile, should unslick.');
+        $wrapper.slick('unslick');
+    } else if (!isSlickInitialized() && $(window).width() > 768) {
+        console.log('Init new slick.');
+        $wrapper.slick({
             dots: true,
-  			infinite: false,
-			speed: 300,
-			slidesToShow: 3,
-			slidesToScroll: 1,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
             responsive: [
                 {
-                breakpoint: 768,
-                settings: "unslick"
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
                 }
-                
             ]
         });
     }
+}
