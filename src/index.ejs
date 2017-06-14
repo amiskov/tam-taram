@@ -66,7 +66,7 @@ jquery.fancybox.min.css"/>
     </div>
 
     <div class="main-content">
-        <span class="main-content__item">VIDEOS</span>
+        <h1 class="main-content__item">VIDEOS</h1>
         <div class="video">
             <img src="//img.youtube.com/vi/z8M0Fa1JVco/maxresdefault.jpg" class="video__images">
             <a data-fancybox href="https://www.youtube.com/watch?v=z8M0Fa1JVco"><span
@@ -109,7 +109,7 @@ jquery.fancybox.min.css"/>
     <div class="videos">
         <% videoSecitons.forEach(section => { %>
         <section class="video-seciton">
-            <h3 class="video-seciton__title"><%= section.title %></h3>
+            <h1 class="video-seciton__title"><%= section.title %></h3>
             <div class="slider responsive">
                 <% var i = 1; section.previews.forEach((preview) => { %>
                 <div class="video-seciton__list video-seciton__list_<%= i %> video-preview">
@@ -154,7 +154,7 @@ jquery.fancybox.min.css"/>
                 <img src="img/svg/<%= preview %>" class="footer__images-item">
                 <% }); %>
             </div>
-            <h2 class="footer__location">LACATION: UNITED STATES <br> LANGUAGE: ENGLISH</h2>
+            <h5 class="footer__location">LACATION: UNITED STATES <br> LANGUAGE: ENGLISH</h2>
         </div>
         <% }); %>
     </div>

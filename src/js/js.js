@@ -2,17 +2,29 @@
 const $videoSectionsHiddenOnMobile = $('.video-seciton__list_3 ~ .video-seciton__list');
 
 hide();
+hide = false ;
 $(window).resize(hide);
 
 function hide() {
+
     const width = $('body').innerWidth();
-    $videoSectionsHiddenOnMobile.toggleClass('hidenn', width <= 768);
+    $videoSectionsHiddenOnMobile.toggleClass('hidden', width <= 768);
 }
 
 $('.js-button').on('click', function (event) {
     event.preventDefault();
-    $(".hidenn").css("display", "block")
+
+    if (!hide){
+    $(".hidden").css("display", "block")
+    hide = true ;
+    } else if (hide) {
+    $(".hidden").css("display", "none")
+    hide = false ;
+    }
+
 });
+
+
 
 const $wrapper = $(".responsive");
 
