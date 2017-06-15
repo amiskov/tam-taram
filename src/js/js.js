@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 const $videoSectionsHiddenOnMobile = $('.video-seciton__list_3 ~ .video-seciton__list');
 
 hide();
-hide = false ;
+hide = false;
 $(window).resize(hide);
 
 function hide() {
@@ -14,35 +14,34 @@ function hide() {
 $('.js-button').on('click', function (event) {
     event.preventDefault();
 
-    if (!hide){
-    $(".hidden").css("display", "block")
-    hide = true ;
+    if (!hide) {
+        $('.hidden').css('display', 'block');
+        hide = true;
     } else if (hide) {
-    $(".hidden").css("display", "none")
-    hide = false ;
+        $('.hidden').css('display', 'none');
+        hide = false;
     }
 
 });
 
 
-
-const $wrapper = $(".responsive");
+const $wrapper = $('.responsive');
 
 slickSlider($wrapper);
 $(window).resize(function () {
-    slickSlider($wrapper)
+    slickSlider($wrapper);
 });
 
 function isSlickInitialized() {
-    return $(".slick-initialized").length;
+    return $('.slick-initialized').length;
 }
 
 function slickSlider($wrapper) {
     if (isSlickInitialized() && $(window).width() <= 768) {
-        console.log('Mobile, should unslick.');
+        // console.log('Mobile, should unslick.');
         $wrapper.slick('unslick');
     } else if (!isSlickInitialized() && $(window).width() > 768) {
-        console.log('Init new slick.');
+        // console.log('Init new slick.');
         $wrapper.slick({
             dots: true,
             infinite: false,

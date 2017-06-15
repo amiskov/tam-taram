@@ -1,35 +1,27 @@
-//@import "~slick-carousel/slick/slick.less";
-@import "media.less";
+@import 'media';
 // Код для примера
-
 body {
     background: #fff;
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 @font-face {
-    font-family: "PTSans";
-    src: url("../fonts/PTSans/PTSansBold/PTSansBold.ttf") format("truetype"),
-    url("../fonts/PTSans/PTSansBold/PTSansBold.woff") format("woff");
-
+    font-family: PTSans;
+    src: url("../fonts/PTSans/PTSansBold/PTSansBold.ttf") format("truetype"), url("../fonts/PTSans/PTSansBold/PTSansBold.woff") format("woff");
 }
 
 .menu {
     text-align: center;
-
     @media (max-width: 768px) {
         & {
             padding-top: 25px;
         }
     }
-
     &__item {
         display: inline-block;
-        font-family: "PTSans";
-
+        font-family: PTSans;
     }
-
     @media (max-width: 768px) {
         &__item {
             display: none;
@@ -37,16 +29,11 @@ body {
     }
     @media (min-width: 769px) {
         &__item {
-            padding-bottom: 22.5px;
-            padding-top: 22.5px;
-            padding-left: 4px;
-            padding-right: 4px;
-
+            padding: 22.5px 4px 0;
             &:hover {
-                background-color: #000000;
+                background-color: #000;
             }
         }
-
     }
     @media (min-width: 1025px) {
         &__item {
@@ -55,21 +42,17 @@ body {
             padding-left: 17px;
             padding-right: 17px;
         }
-
+        
         &__item:hover {
             background-color: #000000;
         }
     }
-
-    &__nav {
-
-    }
+    &__nav {}
     &__txt {
         color: #fff;
         float: left;
         padding-left: 15px;
         margin-top: -10px;
-
     }
     &__dropdown {
         height: 10px;
@@ -89,10 +72,7 @@ body {
             display: none;
         }
     }
-
-    &__search {
-
-    }
+    &__search {}
     @media (max-width: 768px) {
         &__search {
             height: 20px;
@@ -113,14 +93,11 @@ body {
     &__link {
         color: #FFF;
         text-decoration: none;
-
     }
-
     // Bottom Menu
     &_bottom {
         background: green;
     }
-
     &_bottom &__link {
         color: #f00;
     }
@@ -136,7 +113,6 @@ body {
         padding-top: 30px;
     }
     .nearest-salon {
-
         &__info {
             font-family: "PTSans";
             color: #fff;
@@ -146,16 +122,13 @@ body {
         &__dropdown {
             height: 10px;
         }
-
     }
     @media (max-width: 768px) {
         .nearest-salon {
             display: none;
         }
     }
-    &__menu {
-
-    }
+    &__menu {}
     @media @phone {
         &__menu {
             margin-right: 10px;
@@ -171,9 +144,7 @@ body {
             display: none;
         }
     }
-    &__logo {
-
-    }
+    &__logo {}
     @media @phone {
         &__logo {
             height: 15px;
@@ -189,9 +160,7 @@ body {
             height: 18px;
         }
     }
-    &__search {
-
-    }
+    &__search {}
     @media @phone {
         &__search {
             display: none;
@@ -213,11 +182,8 @@ body {
     }
     &__item {
         font-size: 22px;
-
     }
-
     &__bottom {
-
         background: #262626;
     }
     @media @phone {
@@ -228,12 +194,8 @@ body {
 }
 
 .main {
-    &__breadcrumb-search {
-
-    }
-    &__breadcrumb-search-item {
-
-    }
+    &__breadcrumb-search {}
+    &__breadcrumb-search-item {}
     &__search-item {
         display: inline-block;
     }
@@ -246,11 +208,9 @@ body {
         font-family: "PTSans";
         text-decoration: none;
         color: #da5964;
-
     }
     .main-content {
         &__item {
-
             font-size: 64px;
         }
         @media (min-width: 1025px) {
@@ -259,7 +219,6 @@ body {
                 font-family: "PTSans";
             }
         }
-
         .video {
             padding-top: 20px;
             position: relative;
@@ -267,10 +226,7 @@ body {
             &__images {
                 max-width: 100%;
             }
-
-            &__link {
-
-            }
+            &__link {}
             @media @phone {
                 &__link {
                     background: url(../img/play.png) no-repeat;
@@ -310,7 +266,6 @@ body {
                     cursor: pointer;
                 }
             }
-
             &__information {
                 font-family: "PTSans";
                 font-size: 16px;
@@ -323,7 +278,6 @@ body {
                 }
             }
         }
-
     }
     @media @phone {
         .main-content {
@@ -349,7 +303,6 @@ body {
 }
 
 .videos {
-
     .video-seciton {
         &__title {
             color: #000000;
@@ -359,19 +312,15 @@ body {
             font-size: 64px;
             font-family: PTSans;
         }
-
         @media @phone {
             &__title {
                 color: #000;
                 margin-left: 7.6%;
             }
         }
-
-        .slider {
-        }
+        .slider {}
         @media @phone {
-            .slider {
-            }
+            .slider {}
         }
         @media @desktop {
             .slider {
@@ -379,45 +328,36 @@ body {
                 margin: 0 auto;
             }
         }
-        .multiple-items {
-        }
+        .multiple-items {}
         @media @phone {
-            .multiple-items {
-
-            }
+            .multiple-items {}
         }
         .slick-slide {
             margin: 10px 20px;
             position: relative;
-
         }
         @media @phone {
-            .slick-slide {
-
-            }
+            .slick-slide {}
         }
         .slick-slide img {
             width: 100%;
         }
         @media @phone {
-            .slick-slide img {
-            }
+            .slick-slide img {}
         }
         .slick-prev:before,
         .slick-next:before {
             color: black;
         }
         .video-preview {
-            &__pic {
-            }
+            &__pic {}
             @media @phone {
                 &__pic {
                     margin-bottom: 40px;
                     max-width: 100%;
                 }
             }
-            &__play {
-            }
+            &__play {}
             @media @phone {
                 &__play {
                     background: url(../img/play.png) no-repeat;
@@ -430,7 +370,7 @@ body {
                     cursor: pointer;
                 }
             }
-             @media @tablet {
+            @media @tablet {
                 &__play {
                     background: url(../img/play.png) no-repeat;
                     height: 100px;
@@ -460,7 +400,7 @@ body {
                 margin: 36px;
             }
         }
-        .hidden{
+        .hidden {
             display: none;
         }
         .button {
@@ -504,19 +444,15 @@ body {
         background-color: #2a2a2a;
         padding-bottom: 260px;
     }
-    &__images {
-
-    }
+    &__images {}
     @media @phone {
         &__images {
             position: absolute;
-
         }
     }
     @media @tablet {
         &__images {
             text-align: center;
-
             display: inline-block;
             margin-left: 37%
         }
@@ -524,12 +460,9 @@ body {
     @media @desktop {
         &__images {
             text-align: center;
-
         }
     }
-    &__images-item {
-
-    }
+    &__images-item {}
     @media @phone {
         &__images-item {
             position: relative;
@@ -558,7 +491,6 @@ body {
             margin-left: 20px;
         }
     }
-
     &__location {
         font-family: "PTSans";
     }
@@ -569,7 +501,6 @@ body {
             margin-left: 25px;
             color: #fff;
             font-size: 20px;
-
         }
     }
     @media @tablet {
@@ -619,13 +550,4 @@ body {
             margin-top: 50px;
         }
     }
-
 }
-
-
-
-
-
-
-
-
