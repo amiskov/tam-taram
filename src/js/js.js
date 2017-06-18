@@ -2,7 +2,7 @@
 const $videoSectionsHiddenOnMobile = $('.video-seciton__list_3 ~ .video-seciton__list');
 
 hide();
-hide = false;
+let isHidden = false;
 $(window).resize(hide);
 
 function hide() {
@@ -11,24 +11,22 @@ function hide() {
     $videoSectionsHiddenOnMobile.toggleClass('hidden', width <= 768);
 }
 
-$('.js-button').on('click', function (event) {
+$('.js-button').on('click', function(event) {
     event.preventDefault();
 
-    if (!hide) {
+    if (!isHidden) {
         $('.hidden').css('display', 'block');
-        hide = true;
-    } else if (hide) {
+        isHidden = true;
+    } else {
         $('.hidden').css('display', 'none');
-        hide = false;
+        isHidden = false;
     }
-
 });
-
 
 const $wrapper = $('.responsive');
 
 slickSlider($wrapper);
-$(window).resize(function () {
+$(window).resize(function() {
     slickSlider($wrapper);
 });
 
@@ -48,15 +46,13 @@ function slickSlider($wrapper) {
             speed: 300,
             slidesToShow: 3,
             slidesToScroll: 1,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                    }
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
                 }
-            ]
+            }]
         });
     }
 }

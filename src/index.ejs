@@ -61,7 +61,7 @@ jquery.fancybox.min.css"/>
         <ul class="main__breadcrumb-search-item">
             <li class="main__search-item"><a href="" class="main__ref">HOME</a></li>
             <li class="main__search-item"><a href="" class="main__ref">/</a></li>
-            <li class="main__search-item"><span class="main__linkup">VIDEOS<span></li>
+            <li class="main__search-item"><span class="main__linkup">VIDEOS</span></li>
         </ul>
     </div>
 
@@ -109,7 +109,7 @@ jquery.fancybox.min.css"/>
     <div class="videos">
         <% videoSecitons.forEach(section => { %>
         <section class="video-seciton">
-            <h1 class="video-seciton__title"><%= section.title %></h3>
+            <h1 class="video-seciton__title"><%= section.title %></h1>
             <div class="slider responsive">
                 <% var i = 1; section.previews.forEach((preview) => { %>
                 <div class="video-seciton__list video-seciton__list_<%= i %> video-preview">
@@ -154,7 +154,7 @@ jquery.fancybox.min.css"/>
                 <img src="img/svg/<%= preview %>" class="footer__images-item">
                 <% }); %>
             </div>
-            <h5 class="footer__location">LACATION: UNITED STATES <br> LANGUAGE: ENGLISH</h2>
+            <h5 class="footer__location">LACATION: UNITED STATES <br> LANGUAGE: ENGLISH</h5>
         </div>
         <% }); %>
     </div>
@@ -165,6 +165,6 @@ jquery.fancybox.min.css"/>
     <script src="js/js.js"></script>
     <script src="js/slick/slick.js" type="text/javascript"></script>
 
-
+</div>
 </body>
 </html>
