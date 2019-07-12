@@ -1,41 +1,548 @@
 @import 'media';
-
 // Код для примера
 body {
-    background: #ccc;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: PTSans;
+    src: url("../fonts/PTSans/PTSansBold/PTSansBold.ttf") format("truetype"), url("../fonts/PTSans/PTSansBold/PTSansBold.woff") format("woff");
 }
 
 .menu {
-    margin: 0;
-    padding: 0;
     text-align: center;
-    background: red; // red on small devices
-
-    @media @tablet {
-        background: green; // green on medium devices
+    @media (max-width: 768px) {
+        & {
+            padding-top: 25px;
+        }
     }
-
-    @media @desktop {
-        background: blue; // blue on large devices
-    }
-
     &__item {
         display: inline-block;
-        list-style-type: none;
+        font-family: PTSans;
     }
-
+    @media (max-width: 768px) {
+        &__item {
+            display: none;
+        }
+    }
+    @media (min-width: 769px) {
+        &__item {
+            padding: 22.5px 4px 0;
+            &:hover {
+                background-color: #000;
+            }
+        }
+    }
+    @media (min-width: 1025px) {
+        &__item {
+            padding: 22.5px 17px;
+        }
+        &__item:hover {
+            background-color: #000;
+        }
+    }
+    &__nav {}
+    &__txt {
+        color: #fff;
+        float: left;
+        padding-left: 15px;
+        margin-top: -10px;
+    }
+    &__dropdown {
+        height: 10px;
+    }
+    @media (max-width: 768px) {
+        &__nav {
+            margin-right: 10px;
+        }
+    }
+    @media (min-width: 769px) {
+        &__nav {
+            display: none;
+        }
+    }
+    @media (min-width: 1025px) {
+        &__nav {
+            display: none;
+        }
+    }
+    &__search {}
+    @media (max-width: 768px) {
+        &__search {
+            height: 20px;
+            float: right;
+            padding-right: 35px;
+        }
+    }
+    @media (min-width: 769px) {
+        &__search {
+            display: none;
+        }
+    }
+    @media (min-width: 1025px) {
+        &__search {
+            display: none;
+        }
+    }
     &__link {
         color: #FFF;
+        text-decoration: none;
     }
-
     // Bottom Menu
-    &_bottom { // BEM modifier example
+    &_bottom {
         background: green;
     }
-
     &_bottom &__link {
         color: #f00;
     }
 }
 
+.header {
+    &__top {
+        margin: 0;
+        padding: 15px;
+        padding-bottom: 30px;
+        background-color: #6917d2;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .nearest-salon {
+        &__info {
+            font-family: PTSans;
+            color: #fff;
+            float: left;
+            margin-top: -6px;
+        }
+        &__dropdown {
+            height: 10px;
+        }
+    }
+    @media (max-width: 768px) {
+        .nearest-salon {
+            display: none;
+        }
+    }
+    &__menu {}
+    @media @phone {
+        &__menu {
+            margin-right: 10px;
+        }
+    }
+    @media @tablet {
+        &__menu {
+            display: none;
+        }
+    }
+    @media (min-width: 1025px) {
+        &__menu {
+            display: none;
+        }
+    }
+    &__logo {}
+    @media @phone {
+        &__logo {
+            height: 15px;
+        }
+    }
+    @media @tablet {
+        &__logo {
+            height: 18px;
+        }
+    }
+    @media (min-width: 1025px) {
+        &__logo {
+            height: 18px;
+        }
+    }
+    &__search {}
+    @media @phone {
+        &__search {
+            display: none;
+        }
+    }
+    @media @tablet {
+        &__search {
+            height: 20px;
+            float: right;
+            padding-right: 20px;
+        }
+    }
+    @media (min-width: 1025px) {
+        &__search {
+            height: 20px;
+            float: right;
+            padding-right: 20px;
+        }
+    }
+    &__item {
+        font-size: 22px;
+    }
+    &__bottom {
+        background: #262626;
+    }
+    @media @phone {
+        &__bottom {
+            padding-bottom: 40px;
+        }
+    }
+}
 
+.main {
+    &__breadcrumb-search {}
+    &__breadcrumb-search-item {}
+    &__search-item {
+        display: inline-block;
+    }
+    &__ref {
+        font-family: PTSans;
+        text-decoration: none;
+        color: #262626;
+    }
+    &__linkup {
+        font-family: PTSans;
+        text-decoration: none;
+        color: #da5964;
+    }
+    .main-content {
+        &__item {
+            font-size: 64px;
+        }
+        @media (min-width: 1025px) {
+            &__item {
+                font-size: 64px;
+                font-family: PTSans;
+            }
+        }
+        .video {
+            padding-top: 20px;
+            position: relative;
+            border-bottom-style: solid;
+            &__images {
+                max-width: 100%;
+            }
+            &__link {}
+            @media @phone {
+                &__link {
+                    background: url(../img/play.png) no-repeat;
+                    height: 100px;
+                    width: 100px;
+                    position: absolute;
+                    top: 42%;
+                    left: 44%;
+                    margin: -66px 0 0 -20px;
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+            @media @tablet {
+                &__link {
+                    background: url(../img/play.png) no-repeat;
+                    height: 100px;
+                    width: 100px;
+                    position: absolute;
+                    top: 47%;
+                    left: 44%;
+                    margin: -48px 0 0 -20px;
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+            @media @desktop {
+                &__link {
+                    background: url(../img/play.png) no-repeat;
+                    height: 100px;
+                    width: 100px;
+                    position: absolute;
+                    top: 47%;
+                    left: 44%;
+                    margin: -48px 0 0 -20px;
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+            &__information {
+                font-family: PTSans;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            @media (min-width: 1025px) {
+                &__information {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    @media @phone {
+        .main-content {
+            background-color: #FFF;
+            height: 100%;
+            margin: 27.5px;
+        }
+    }
+    @media @tablet {
+        .main-content {
+            background-color: #FFF;
+            height: 100%;
+            margin: 27.5px;
+        }
+    }
+    @media @desktop {
+        .main-content {
+            background-color: #FFF;
+            height: 100%;
+            margin: 75px 300px 0;
+        }
+    }
+}
+
+.videos {
+    .video-seciton {
+        &__title {
+            color: #000;
+            margin-left: 15.6%;
+            display: block;
+            margin-top: 100px;
+            font-size: 64px;
+            font-family: PTSans;
+        }
+        @media @phone {
+            &__title {
+                color: #000;
+                margin-left: 7.6%;
+            }
+        }
+        .slider {}
+        @media @phone {
+            .slider {}
+        }
+        @media @desktop {
+            .slider {
+                width: 70.5%;
+                margin: 0 auto;
+            }
+        }
+        .multiple-items {}
+        @media @phone {
+            .multiple-items {}
+        }
+        .slick-slide {
+            margin: 10px 20px;
+            position: relative;
+        }
+        @media @phone {
+            .slick-slide {}
+        }
+        .slick-slide img {
+            width: 100%;
+        }
+        @media @phone {
+            .slick-slide img {}
+        }
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+        .video-preview {
+            &__pic {}
+            @media @phone {
+                &__pic {
+                    margin-bottom: 40px;
+                    max-width: 100%;
+                }
+            }
+            &__play {}
+            @media @phone {
+                &__play {
+                    background: url(../img/play.png) no-repeat;
+                    height: 100px;
+                    width: 100px;
+                    position: absolute;
+                    left: 43%;
+                    margin: -42% 0 0 0;
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+            @media @tablet {
+                &__play {
+                    background: url(../img/play.png) no-repeat;
+                    height: 100px;
+                    width: 100px;
+                    position: absolute;
+                    top: 13%;
+                    margin: 0 0 0 36.5%;
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+            @media @desktop {
+                &__play {
+                    background: url(../img/play.png) no-repeat;
+                    height: 100px;
+                    width: 100px;
+                    position: absolute;
+                    top: 25%;
+                    margin: 0 0 0 39.5%;
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+        }
+        @media @phone {
+            .video-preview {
+                margin: 36px;
+            }
+        }
+        .hidden {
+            display: none;
+        }
+        .button {
+            &__link {
+                color: #fff;
+                display: inline-block;
+                margin-top: 16px;
+            }
+            @media (max-width: 768px) {
+                &__button-item {
+                    font-size: 13px;
+                }
+            }
+        }
+        @media @phone {
+            .button {
+                background-color: #252525;
+                height: 50px;
+                width: 30%;
+                text-align: center;
+                margin: auto;
+                position: relative;
+            }
+        }
+        @media @tablet {
+            .button {
+                display: none;
+            }
+        }
+        @media @desktop {
+            .button {
+                display: none;
+            }
+        }
+    }
+}
+
+.footer {
+    margin-top: 100px;
+    &__content {
+        background-color: #2a2a2a;
+        padding-bottom: 260px;
+    }
+    &__images {}
+    @media @phone {
+        &__images {
+            position: absolute;
+        }
+    }
+    @media @tablet {
+        &__images {
+            text-align: center;
+            display: inline-block;
+            margin-left: 37%
+        }
+    }
+    @media @desktop {
+        &__images {
+            text-align: center;
+        }
+    }
+    &__images-item {}
+    @media @phone {
+        &__images-item {
+            position: relative;
+            height: 22px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-top: 40px;
+            margin-left: 9px;
+        }
+    }
+    @media @tablet {
+        &__images-item {
+            position: relative;
+            height: 20px;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-top: 40px;
+            margin-left: 20px;
+        }
+    }
+    @media @desktop {
+        &__images-item {
+            position: relative;
+            height: 50px;
+            margin-top: 40px;
+            margin-left: 20px;
+        }
+    }
+    &__location {
+        font-family: PTSans;
+    }
+    @media @phone {
+        &__location {
+            position: absolute;
+            margin-top: 95px;
+            margin-left: 25px;
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+    @media @tablet {
+        &__location {
+            font-size: 11px;
+            display: inline-block;
+            float: right;
+            color: #fff;
+            margin-right: 50px;
+            margin-top: 40px;
+        }
+    }
+    @media @desktop {
+        &__location {
+            font-size: 13px;
+            display: inline-block;
+            float: right;
+            color: #fff;
+            margin-right: 50px;
+            margin-top: 50px;
+        }
+    }
+    &__information {
+        font-family: PTSans;
+    }
+    @media @phone {
+        &__information {
+            font-size: 20px;
+            position: absolute;
+            margin-top: 155px;
+            margin-left: 25px;
+        }
+    }
+    @media @tablet {
+        &__information {
+            font-size: 11px;
+            display: inline-block;
+            position: absolute;
+            margin-top: 40px;
+            margin-left: 40px;
+        }
+    }
+    @media @desktop {
+        &__information {
+            font-size: 13px;
+            margin-top: 50px;
+        }
+    }
+}

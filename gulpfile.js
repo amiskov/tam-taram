@@ -29,11 +29,6 @@ gulp.task('img', () => {
         .pipe(gulp.dest('./dist/img'));
 });
 
-gulp.task('js', () => {
-    gulp.src('src/js/**/*.*')
-        .pipe(gulp.dest('./dist/js'));
-});
-
 gulp.task('html', () => {
     gulp.src('src/index.ejs')
         .pipe(ejs().on('error', gutil.log))
@@ -41,9 +36,20 @@ gulp.task('html', () => {
         .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('js', () => {
+    gulp.src('src/js/**/*.*')
+        .pipe(gulp.dest('./dist/js'));
+});
+
+gulp.task('fonts', () => {
+    gulp.src('src/fonts/**/*.*')
+        .pipe(gulp.dest('./dist/fonts'));
+});
+
 gulp.watch('src/less/**/*.less', ['styles']);
-gulp.watch('src/**/*.ejs', ['html']);
+gulp.watch('src/*.ejs', ['html']);
 gulp.watch('src/img/**/*.*', ['img']);
 gulp.watch('src/js/**/*.*', ['js']);
+gulp.watch('src/fonts/**/*.*', ['fonts']);
 
-gulp.task('default', ['styles', 'html', 'img', 'js']);
+gulp.task('default', ['styles', 'html', 'img', 'js', 'fonts' ]);

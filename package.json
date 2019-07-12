@@ -11,11 +11,11 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.11",
-    "eslint": "^3.19.0",
+    "fancybox": "^3.0.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-ejs": "^3.0.1",
     "gulp-rename": "^1.2.2",
-    "stylelint": "^7.10.1"
+    "slick-carousel": "^1.6.0"
   },
   "dependencies": {
     "gulp": "^3.9.1",

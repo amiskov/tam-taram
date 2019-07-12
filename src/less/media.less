@@ -3,9 +3,9 @@
 
 /* # Setup devices width */
 // ## Minimum values for device width
-@xs-min: 320px; // extra small
-@sm-min: 768px; // small
-@md-min: 992px; // middle
+@xs-min: 768px; // extra small
+@sm-min: 769px; // small
+@md-min: 1025px; // middle
 @lg-min: 1200px; // large
 
 // ## Maximum values for device width
@@ -14,7 +14,7 @@
 @md-max: (@lg-min - 1); // middle
 
 /* # Variables for mobile first approach and strict ranges */
-@phone: ~"only screen and (min-width: @{xs-min})";
+@phone: ~"only screen and (max-width: @{xs-min})";
 @phone-strict: ~"only screen and (min-width: @{xs-min}) and (max-width: @{xs-max})";
 
 @tablet: ~"only screen and (min-width: @{sm-min})";
